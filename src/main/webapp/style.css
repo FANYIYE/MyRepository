@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5em;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1.5em;
+}
+
+.strength-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.strength-bar {
+    width: 0;
+    height: 100%;
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    border-radius: 5px;
+}
+
+.strength-bar.weak {
+    background-color: #ff4d4f;
+}
+
+.strength-bar.medium {
+    background-color: #faad14;
+}
+
+.strength-bar.strong {
+    background-color: #52c41a;
+}
+
+.result-container {
+    text-align: left;
+}
+
+.result-container p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5em;
+}
+
+#rules-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rule {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+.rule.satisfied {
+    color: #52c41a;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.rule.satisfied::before {
+    content: "✓ ";
+    color: #52c41a;
+}
+
+.rule.unsatisfied::before {
+    content: "✗ ";
+    color: #ff4d4f;
+}
